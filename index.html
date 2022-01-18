@@ -109,7 +109,12 @@
   }
 
   $(".form-control").on("change", changeColor);
-
+  //Step 7
+  function removeImg(evt){
+    // console.log("evt: ", evt);
+    evt.target.remove();
+  }
+  $("img").on("click", removeImg);
     
 </script>
 </body>
