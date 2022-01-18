@@ -92,6 +92,22 @@
   //Step 4
   let $list = $("ol");
   $("<li>Does this work?</li>").appendTo($list);
+  
+  //Step 5
+  $("aside").empty();
+  $("<p> This is adding a p to aside</p>").appendTo($("aside"));
+  
+  //Step 6
+  function changeColor(){
+    
+    const red = $(".form-control").eq(0).val();
+    const blue =$(".form-control").eq(1).val();
+    const green =$(".form-control").eq(2).val();
+    $("body").css("background-color", `rgb(${red}, ${green}, ${blue})`);
+    
+  }
+
+  $(".form-control").on("change", changeColor);
 
     
 </script>
