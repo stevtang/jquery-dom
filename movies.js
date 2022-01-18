@@ -17,6 +17,8 @@ function handleSubmit(evt){
     
 }
 
+
+
 function makeEntry($title, $rating){
     // const newEntry = $("<div></div>");
     $(".entries").append($("<div>"));
