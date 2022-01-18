@@ -6,18 +6,21 @@
 //  title, rating, remove button
 //function that appends new entry to entries div
 
-
-function handleSubmit(){
+function handleSubmit(evt){
+    evt.preventDefault();
     const $title = $(".title");
     const $rating = $(".rating");
 
-    alert(`Title: ${$title.val()}, Rating: ${$rating.val()}`);
-
+    console.log(`Title: ${$title.val()}, Rating: ${$rating.val()}`);
+    makeEntry($title, $rating);
+    
+    
 }
 
 function makeEntry($title, $rating){
-    const newEntry = $("<div></div>");
-    newEntry.class("entry").text(`Title: ${$title}`).appendTo(".entries");
+    // const newEntry = $("<div></div>");
+    $(".entries").append($("<div>"));
+    // newEntry.class("entry").text(`Title: ${$title}`).appendTo(".entries");
 }
 
 $(".submit-btn").on("click", handleSubmit);
